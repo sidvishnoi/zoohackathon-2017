@@ -1,0 +1,83 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style type="text/css">
+  .content {
+    background: #eee;
+    color: #333;
+    padding: 1em;
+  }
+  .content img {
+    border-radius: 4px;
+    box-shadow: 2px 3px 4px #777;
+    margin: 1em auto 0;
+  }
+  .content ul {
+    padding: 1em;
+  }
+  .content p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .content p + p {
+    margin: 0.5em 0;
+  }
+  .content li {
+    margin: 3px 0;
+  }
+  .content a {
+    color: #f06;
+  }
+  </style>
+  <title>Rhino</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="logo">
+        <a href="/"><img src="../../images/rhino2.png" alt="logo"/></a>
+      </div>
+      <nav class="">
+        <ul>
+          <li><a href="../../play/">Play Game</a></li>
+          <li><a href="../../species/rhino/">Species</a></li>
+          <li><a href="../../events/">Events</a></li>
+          <li><a href="../../news/">News</a></li>
+          <li><a href="../../articles/">Articles</a></li>
+        </ul>
+        <div id="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <div class="content" id="content">
+      <h2>Rhino</h2>
+      <img src="../../images/rhino.jpg">
+      <small style="float: right"><em>Looks better alive, with it's horn!</em></small>
+      <p>&nbsp; </p>
+      <p><em>Hunters are trying to kill and capture rhinos for their valuable horns.</em></p>
+
+      <p>Rhinoceros horns and other products, such as blood, skin and urine, have long been important constituents in traditional Chinese medicines used to reduce fevers, headaches and other illnesses.</p>
+      <p>There is a history of ornamental use of rhinoceros horn also.</p>
+      <p>Contrary to popular myth, rhinoceros horn has never been used in traditional medicine as an aphrodisiac.</p>
+
+      <ul>
+        <strong>Resouces</strong>
+        <li><a href="http://www.traffic.org/rhinos/">http://www.traffic.org/rhinos/</a></li>
+        <li><a href="https://www.savetherhino.org/rhino_info/poaching_statistics">Poaching Statistics of Rhino @savetherhino.org</a></li>
+      </ul>
+
+    </div>
+  </main>
+
+  <script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+  })
+  </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <style type="text/css">
+    #gameover {
+      position: fixed;
+      top: -100vh;
+      width: calc(100vw - 1em);
+      height: 0;
+      left: 0.5em;
+      background: #fff;
+      color: #333;
+      border: 0.5em solid rgba(0, 0, 0, 0.7);
+      z-index: -1;
+      display: flex;
+      padding: 1em 0;
+      font-family: cursive;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: top 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    }
+    #gameover h2, #gameover p {
+      padding: 1em 1em 0;
+    }
+    #gameover.active {
+      z-index: 9999;
+      height: calc(100vh - 1em);
+      top: 0.5em;
+    }
+    a.btn {
+      display: block;
+      float: right;
+      padding: 1em;
+      background: #65b601;
+      color: #fff;
+      margin: 2px 0.5em;
+      text-transform: uppercase;
+    }
+    a.btn:hover {
+      background: #558d0f;
+    }
+  </style>
+  <title>Play Game</title>
+</head>
+
+<body>
+  <div id="gameover" class="">
+    <h2>You saved a special Rhino!</h2>
+    <img src="../images/rhino-unlock.png" onclick="this.src = (this.src.includes('../images/rhino-unlock.png') ? '../images/rhino-unlock-2.png' : '../images/rhino-unlock.png')">
+    <div>
+      <a class="btn" href="../species/rhino/">Know More</a>
+      <a class="btn" href="../play/">Continue</a>
+    </div>
+  </div>
+  <main>
+    <header>
+      <div class="logo">
+        <a href="../"><img src="../images/rhino2.png" alt="logo"/></a>
+      </div>
+      <nav class="">
+        <ul>
+          <li><a href="../play/">Play Game</a></li>
+          <li><a href="../species/rhino/">Species</a></li>
+          <li><a href="../events/">Events</a></li>
+          <li><a href="../news/">News</a></li>
+          <li><a href="../articles/">Articles</a></li>
+        </ul>
+        <div id="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <div class="content" id="content"></div>
+  </main>
+
+  <script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+  })
+  </script>
+
+  <script type="text/javascript" src="../vendor/phaser.min.js"></script>
+  <script type="text/javascript" src="../vendor/phaser.healthbar.js"></script>
+  <script type="text/javascript" src="species.js" ></script>
+  <script type="text/javascript" src="game.js" ></script>
+
+</body>
+</html>

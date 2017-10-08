@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Zoohackathon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .content {
+      background: #000 url('images/the-jungle.jpg');
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: -320px 0;
+    }
+    .content {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+    .content a {
+      display: block;
+      font-size: 3em;
+      color: #fff;
+      font-family: Calibri, sans-serif;
+      font-weight: 300;
+      margin: auto;
+      padding: 0.2em 1em;
+      position: relative;
+      bottom: -30vh;
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .content a:hover {
+      background:rgba(0,0,0,0.9);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="logo">
+        <a href=""><img src="images/rhino2.png" alt="logo"/></a>
+      </div>
+      <nav class="">
+        <ul>
+          <li><a href="play/">Play Game</a></li>
+          <li><a href="species/rhino/">Species</a></li>
+          <li><a href="events/">Events</a></li>
+          <li><a href="news/">News</a></li>
+          <li><a href="articles/">Articles</a></li>
+        </ul>
+        <div id="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <div class="content" id="content">
+      <a href="play/">Play Now</a>
+    </div>
+  </main>
+  <script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+  })
+  </script>
+</body>
+
+</html>

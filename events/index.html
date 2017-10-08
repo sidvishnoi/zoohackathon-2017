@@ -1,0 +1,174 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <style type="text/css">
+  .content {
+    background: #000;
+    color: #fff;
+    padding: 1em;
+  }
+
+  .content img {
+    border-radius: 4px;
+    box-shadow: 2px 3px 4px #777;
+    margin: 1em auto 0;
+  }
+
+  .content ul {
+    padding: 1em;
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .content p+p {
+    margin: 0.5em 0;
+  }
+
+  .content li {
+    margin: 3px 0;
+  }
+
+  .content a {
+    color: #f06;
+  }
+
+  .searchForm {
+    flex-direction: row;
+    justify-content: flex-end;
+    display: flex;
+    background-color: green;
+  }
+
+  .input {
+    padding: 5px;
+    /*   font-weight: 150%; */
+  }
+
+  input[type="text"] {
+    font-size: 16px;
+    color: grey;
+  }
+
+  input[type="submit"] {
+    font-size: 18px;
+  }
+
+  .search {
+    padding: 5px;
+  }
+
+  .other {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .line {
+    color: white;
+    text-align: center;
+    font-family: Monospace;
+    font-size: 120%;
+  }
+
+  .event {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0.25em 0;
+    background: white;
+    align-items: center;
+  }
+
+  .image img {
+    width: 100px;
+    height: 100px;
+    box-shadow: none;
+  }
+
+  .content2 {
+    font-family: Calibri;
+    color: black;
+  }
+  </style>
+  <title>Rhino</title>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="logo">
+        <a href="../"><img src="../images/rhino2.png" alt="logo"/></a>
+      </div>
+      <nav class="">
+        <ul>
+          <li><a href="../play/">Play Game</a></li>
+          <li><a href="../species/rhino/">Species</a></li>
+          <li><a href="../events/">Events</a></li>
+          <li><a href="../news/">News</a></li>
+          <li><a href="../articles/">Articles</a></li>
+        </ul>
+        <div id="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <div class="content" id="content">
+      <div class="page">
+        <div class="searchForm">
+          <div class="input">
+            <input type="text" value="Enter location" />
+          </div>
+          <div class="search">
+            <input type="submit" value="Search" />
+          </div>
+        </div>
+        <div class="other">
+          <div class="line">
+            <p>Showing events in New Delhi</p>
+          </div>
+          <div class="event">
+            <div class="image"><img src="../images/zoohackathon.png">
+            </div>
+            <div class="content2">
+              <p>ZooHackathon (US embassy)
+                <br>Location: Jor Bagh
+                <br>Date: 6-8 Oct 2017</p>
+            </div>
+          </div>
+          <div class="event">
+            <div class="image"><img src="../images/rhino2.png" alt="">
+            </div>
+            <div class="content2">
+              <p>ZooHackathon (US embassy)
+                <br>Location: Jor Bagh
+                <br>Date: 6-8 Oct 2017</p>
+            </div>
+          </div>
+          <div class="event">
+            <div class="image"><img src="../images/zoohackathon.png"  >
+            </div>
+            <div class="content2">
+              <p>ZooHackathon (US embassy)
+                <br>Location: Jor Bagh
+                <br>Date: 6-8 Oct 2017</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+  document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.querySelector('nav').classList.toggle('active');
+  })
+  </script>
+</body>
+
+</html>
